@@ -39,7 +39,7 @@ Os processos são similares com os processos da parte 1 do projeto, porém, util
 * Main - No arquivo main é feita a solicitação das mensagens dos processos. Logo após, é feita a criação do Id das duas memórias. O valor do Control se inicia como 0, para que todos os processos possam ler e escrever. Após isso, são chamados os comandos do Linux para abrir os processo de escrita e leitura. O looping do for serve para realizar a leitura constante das mensagens enquanto ainda houver processos, enquanto o While é para manter os processos abertos.
 
 ### ✨ Outras informações
-Trabalho feito para a cadeira de Sistemas Operacionais em 2023.1.
+Trabalho feito para a cadeira de Sistemas Operacionais em 2023.1, esse repositório é novo e é apenas para organizar melhor as informações a respeito do trabalho feito, pois na época que fiz não utilizava tão bem o GitHub.
 
 ---
 Feito por [Alicia Paiva](https://github.com/aliciapaivaa) 😊
