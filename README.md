@@ -1,9 +1,9 @@
 # Projeto
 
 Implementar um programa que atue como um mensageiro de texto (estilo whatsapp) que troca mensagens usando memória compartilhada (Shared Memory - SHM). Assim, o programa precisa escrever e ler na SHM os dados trocados. Adicionalmente, devem ser feitas as seguintes funcionalidades:
-**Parte 1)** Comunicação entre 2 processos (P2P) somente por Texto: os dois processos apenas leem e escrevem caracteres de texto na SHM, onde qualquer um dos dois pode ler ou escrever a qualquer momento;
-**Parte 2)** Comunicação entre P2P para troca de arquivos: Um processo envia um arquivo para o outro pela SHM, onde apenas um arquivo por vez é enviado;
-**Parte 3)** Comunicação de um processo para vários: Um processo envia um texto via SHM para N processos (onde N>2) que recebem o texto, onde o texto expira após ser lido por todos os N processos.
+1. Comunicação entre 2 processos (P2P) somente por Texto: os dois processos apenas leem e escrevem caracteres de texto na SHM, onde qualquer um dos dois pode ler ou escrever a qualquer momento;
+2. Comunicação entre P2P para troca de arquivos: Um processo envia um arquivo para o outro pela SHM, onde apenas um arquivo por vez é enviado;
+3. Comunicação de um processo para vários: Um processo envia um texto via SHM para N processos (onde N>2) que recebem o texto, onde o texto expira após ser lido por todos os N processos.
 
 ## 🚀 Programa sendo executado
 
