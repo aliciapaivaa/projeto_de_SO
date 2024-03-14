@@ -1,16 +1,16 @@
-# Troca de mensagens
+# Projeto
 
 Implementar um programa que atue como um mensageiro de texto (estilo whatsapp) que troca mensagens usando memória compartilhada (Shared Memory - SHM). Assim, o programa precisa escrever e ler na SHM os dados trocados. Adicionalmente, devem ser feitas as seguintes funcionalidades:
-    Parte 1) Comunicação entre 2 processos (P2P) somente por Texto: os dois processos apenas leem e escrevem caracteres de texto na SHM, onde qualquer um dos dois pode ler ou escrever a qualquer momento;
-    Parte 2) Comunicação entre P2P para troca de arquivos: Um processo envia um arquivo para o outro pela SHM, onde apenas um arquivo por vez é enviado;
-    Parte 3) Comunicação de um processo para vários: Um processo envia um texto via SHM para N processos (onde N>2) que recebem o texto, onde o texto expira após ser lido por todos os N processos.
+**Parte 1)** Comunicação entre 2 processos (P2P) somente por Texto: os dois processos apenas leem e escrevem caracteres de texto na SHM, onde qualquer um dos dois pode ler ou escrever a qualquer momento;
+**Parte 2)** Comunicação entre P2P para troca de arquivos: Um processo envia um arquivo para o outro pela SHM, onde apenas um arquivo por vez é enviado;
+**Parte 3)** Comunicação de um processo para vários: Um processo envia um texto via SHM para N processos (onde N>2) que recebem o texto, onde o texto expira após ser lido por todos os N processos.
 
 ## 🚀 Programa sendo executado
 
 Vídeo do programa da **[parte 1](https://drive.google.com/file/d/1ojtSX6ScRf-2oN_J0-f2D-w8MOW6lz8-/view?usp=drive_link)** executando.
 Vídeo do programa da **[parte 3](https://drive.google.com/file/d/146cS6GeEY41Diae3ApMzWb2z3G9Cwz3Y/view?usp=drive_link)** executando.
 
-### 📋 Sobre a parte 1 do projeto: Compartilhamento de caracteres
+### 📋 Parte 1 do projeto: Compartilhamento de caracteres
 
 A princípio, foi utilizada a ideia de fazer dois códigos separados para testar a escrita e leitura dos processos, de forma separada, que iria trabalhar junto de um arquivo main. Porém, para diminuir a quantidade de escrita de código, resolvemos utilizar threads que poderiam chamar as funções de escrita e leitura.
 
@@ -26,11 +26,11 @@ Na função main são realizadas as criações de threads para leitura e escrita
 * Main geral
 No arquivo main.cpp, a função System é utilizada para realizar comandos no Linux. Dentro dos comandos, é utilizado o "g++ processo1.cpp -o processo1.out && g++ processo2.cpp -o processo2.out", que serve para abrir os arquivos dos processos junto de seu compilador. Logo depois é utilizado o comando “xterm -e ./processo1.out &” para chamar o emulador.
 
-### 📋 Sobre a parte 2 do projeto: Compartilhamento de arquivos
+### 📋 Parte 2 do projeto: Compartilhamento de arquivos
 
 Devido a parte 1 do projeto não ter sido finalizada somente com um bloco de memória, não foi implementada a parte de arquivos. A ideia seria utilizar a biblioteca cstdio do C++, que auxilia na manipulação de arquivos, com funções como fopen, fscran, etc.
 
-### 📋 Sobre a parte 3 do projeto: Troca de mensagens com mais de um processo
+### 📋 Parte 3 do projeto: Troca de mensagens com mais de um processo
 
 Os processos são similares com os processos da parte 1 do projeto, porém, utilizando um vetor de controle de escrita e leitura.
 
@@ -45,6 +45,9 @@ Novamente, é passado como parâmetro da main um vetor de caracteres e um inteir
 
 * Main
 No arquivo main é feita a solicitação das mensagens dos processos. Logo após, é feita a criação do Id das duas memórias. O valor do Control se inicia como 0, para que todos os processos possam ler e escrever. Após isso, são chamados os comandos do Linux para abrir os processo de escrita e leitura. O looping do for serve para realizar a leitura constante das mensagens enquanto ainda houver processos, enquanto o While é para manter os processos abertos.
+
+### ✨ Outras informações
+Trabalho feito para a cadeira de Sistemas Operacionais em 2023.1.
 
 ---
 Feito por [Alicia Paiva](https://github.com/aliciapaivaa) 😊
